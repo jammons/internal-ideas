@@ -15,20 +15,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'ideasdev.db'             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
-
-#email configuration
-EMAIL_HOST = 'smtp.webfaction.com'
-EMAIL_HOST_USER = 'jn325_smtp'
-EMAIL_HOST_PASSWORD = 'ether1227'
-#EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -114,11 +100,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-    # 'contact',
     'customtags',
     'idea',
-    # 'portfolio',
-    'sorl.thumbnail',
     'south',
 	'tagging',
     'voting',
