@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <h1>Create New User</h1>
+{% endblock %}
+
+{% block content %}
+    <form action="/accounts/new_user/" method="post" id="registration-form">
+        {{ form }}
+        <input type="submit" value="Submit" />
+    </form>
+{% endblock %}

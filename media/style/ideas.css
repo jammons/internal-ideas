@@ -531,3 +531,9 @@ form p {
 .messages li.info { background-color: #FFA; }
 .messages li.error { background-color: #F64; }
 .messages li.success { background-color: #7D7; }
+
+
+/*********************************/
+/***Accounts**********************/
+#registration-form ul { margin: 0px; list-style-type: none; }
+#registration-form .errorlist li { color: #445588; margin-left: 3px; }

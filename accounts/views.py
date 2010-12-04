@@ -5,6 +5,8 @@ from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response
 from django.contrib import messages
 
+from ideas.accounts.forms import NewUserForm
+
 def login(request):
     ''' logs in a user '''
     template_vars = {}
@@ -41,3 +43,18 @@ def logout(request):
     django_auth.logout(request)
     messages.success(request, 'Logout Complete')
     return HttpResponseRedirect('/')
+
+def new_user(request):
+    template_vars = {}
+    if request.POST:
+        form = NewUserForm(request.POST)
+        if form.is_valid():
+            user = django_auth.models.User.objects.create_user(form.cleaned_data['username'],
+                form.cleaned_data['email'],
+                form.cleaned_data['password1'])
+            messages.success(request, "User created successfully, please wait for admin approval")
+        form = NewUserForm()
+    else:
+        form = NewUserForm()
+    template_vars['form'] = form
+    return render_to_response('accounts/new_user.html', template_vars, context_instance=RequestContext(request))
