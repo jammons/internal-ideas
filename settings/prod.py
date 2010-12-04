@@ -1,4 +1,4 @@
-from ideas.settings.globals import *
+from globals import *
 
 DATABASE_ENGINE = 'mysql'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = 'mahalo_ideas'             # Or path to database file if using sqlite3.
