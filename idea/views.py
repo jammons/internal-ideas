@@ -4,8 +4,8 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from django.contrib import messages
-from models import Idea, IdeaForm
-from voting.models import Vote
+from ideas.idea.models import Idea, IdeaForm
+from ideas.voting.models import Vote
 import operator
 
 def idea_list(request):
